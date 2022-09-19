@@ -1,0 +1,144 @@
+/* para remover as margens, paddings nas caixas 
+Ou limpando margens, paddings que tem como padrao no naveggador */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul{
+  list-style: none;
+}
+body * {
+  font-family: 'Inter', sans-serif;
+  line-height: 160%;
+}
+
+body{
+ background-image: url(./assets/bg.jpg);
+ background-position: top center;
+ background-repeat: no-repeat;
+ background-size: 100% auto;
+ background-color: #121214 ;
+}
+
+
+header {
+  margin-top: 32px;
+  /* height: calc(120px + 32px); */
+}
+header div {
+  width: 120px;
+  margin: 32px auto;
+  background-image:linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+  border-radius: 50%;
+  display: flex;
+  padding: 4px;
+  transition: transform .3s;
+}
+
+header div:hover{
+  transform: scale(1.1);
+}
+header div img{
+  width: 100%;
+  border-radius: 50%;
+
+}
+
+main {
+  max-width: 520px;
+  width: 90%;
+  margin: 32px auto;
+  display: grid;
+  gap: 32px;
+
+}
+
+section{
+  color: white;
+  background-image:linear-gradient(90deg, #C91842 0%, #5CC2E2 100%);
+  padding-top: 4px;
+  border-radius: 10px;
+}
+
+section div{
+  
+  background-color: #262629;
+  padding:32px;
+  border-radius: 8px;
+  gap: 24px;
+}
+
+section h2{
+  letter-spacing: -0.18px;
+
+}
+
+section p{
+letter-spacing: -0.18px;
+color: #C1C1C1;
+}
+
+section ul{
+  max-width: 448px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-radius: 16px;
+}
+section ul li{
+  transition: transform .3s;
+}
+section ul li:hover{
+
+  transform: scale(1.1);
+}
+
+.films img{
+  
+  width: 100px;
+  border-radius: 16px;
+  gap: 16px;
+}
+
+.series img{
+  width: 100px;
+  border-radius: 16px;
+  gap: 16px;
+}
+header div{
+  animation: from0Top100 .7s .4s backwards;
+}
+main section{
+
+  animation: toTop .7s backwards;
+}
+
+main section:nth-child(1){
+  animation-delay: 0;
+}
+main section:nth-child(2){
+  animation-delay: .4s;
+}
+
+main section:nth-child(3){
+  animation-delay: .8s;
+}
+
+/* Animations  */
+
+@keyframes from0Top100 {
+
+  0% { opacity: 0; transform: translateY(-30px) }
+  100% {opacity: 1; transform: translateY(0); }
+  
+}
+
+@keyframes toTop {
+
+  from { opacity: 0; transform: translateX(30px) }
+  to {opacity: 1; transform: translateX(0); }
+  
+}
